@@ -1,12 +1,26 @@
-﻿namespace Grosu_Andrada_lab7
+﻿using System;
+using Grosu_Andrada_lab7.Data;
+using System.IO;
+namespace Grosu_Andrada_lab7;
+public partial class App : Application
 {
-    public partial class App : Application
+    static ShoppingListDatabase database;
+    public static ShoppingListDatabase Database
     {
-        public App()
+        get
         {
-            InitializeComponent();
-
-            MainPage = new AppShell();
+            if (database == null)
+            {
+                database = new
+               ShoppingListDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
+               LocalApplicationData), "ShoppingList.db3"));
+            }
+            return database;
         }
+    }
+    public App()
+    {
+        InitializeComponent();
+        MainPage = new AppShell();
     }
 }

@@ -1,10 +1,16 @@
-﻿namespace Grosu_Andrada_lab7
+﻿using Grosu_Andrada_lab7.Models;
+
+namespace Grosu_Andrada_lab7;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        object value = InitializeComponent( );
+    }
+
+    private object InitializeComponent()
+    {
+        throw new NotImplementedException();
     }
 }
