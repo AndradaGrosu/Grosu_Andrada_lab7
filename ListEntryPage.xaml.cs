@@ -1,12 +1,13 @@
 using Grosu_Andrada_lab7.Models;
+
 namespace Grosu_Andrada_lab7;
 
 public partial class ListEntryPage : ContentPage
 {
-	public ListEntryPage()
-	{
-		InitializeComponent();
-	}
+    public ListEntryPage()
+    {
+        InitializeComponent();
+    }
     protected override async void OnAppearing()
     {
         base.OnAppearing();
@@ -29,4 +30,4 @@ public partial class ListEntryPage : ContentPage
             });
         }
     }
-    }
+}
